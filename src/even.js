@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import name from './cli.js';
+import { userName } from './cli.js';
 
 const evenGame = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -22,12 +22,12 @@ const evenGame = () => {
     }
     if (!isCorrect && answer === 'yes') {
       console.log('\'yes\' is wrong answer ;(. Correct answer was \'no\'.');
-      console.log(`Let's try again, ${name.userName}!`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
     if (!isCorrect && answer === 'no') {
       console.log('\'no\' is wrong answer ;(. Correct answer was \'yes\'.');
-      console.log(`Let's try again, ${name.userName}!`);
+      console.log(`Let's try again, ${userName}!`);
       break;
     }
     if (!isCorrect) {
@@ -36,7 +36,7 @@ const evenGame = () => {
     }
 
     if (i === 2) {
-      console.log(`Congratulations, ${name.userName}`);
+      console.log(`Congratulations, ${userName}`);
     }
   }
 };
